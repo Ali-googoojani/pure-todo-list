@@ -1,0 +1,26 @@
+@media (max-width: 991px) {
+    .todo-container {
+        width: 80%;
+    }
+
+    .grid-container {
+        grid-template-columns: auto !important;
+    }
+
+    input {
+        width: auto;
+    }
+
+    .row {
+        margin-top: 50px;
+        margin-left: 10px;
+    }
+
+    #inserter{
+        height: 150px;
+    }
+    body{
+        align-items: start;
+        height: auto;
+    }
+}

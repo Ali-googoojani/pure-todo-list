@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="todo.js" defer></script>
+    <style>
+        .todo-container {
+            width: auto;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+            border-radius: 20px;
+        }
+
+        .grid-container {
+            margin-top: 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 100px;
+            gap: 10px;
+            align-items: center;
+            padding: 10px;
+            height: 100px;
+        }
+
+        p {
+            margin: 0;
+        }
+
+        button {
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .delete-btn {
+            background-color: tomato;
+            color: white;
+            border: none;
+            padding-bottom: 15px;
+            padding-top: 15px;
+        }
+
+
+        .add-btn {
+            background-color: green;
+            color: white;
+            border: none;
+            padding-top: 15px;
+            padding-bottom: 15px;
+
+        }
+
+
+        input {
+            padding: 10px 10px;
+            font-size: 16px;
+            width: 200px;
+            height: 21px;
+        }
+
+        .title {
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            background-color: wheat;
+            padding: 15px;
+            text-align: center;
+            font-size: 1.8rem;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .color-container {
+
+            padding: 10px;
+        }
+
+        .color-container p {
+            padding: 10px;
+            text-align: center;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 700px;
+        }
+
+        #inserter {
+            border-top: 1px solid black;
+            grid-auto-rows: 50px;
+            height: 300px;
+            overflow-y: scroll;
+
+        }
+
+        #inserter::-webkit-scrollbar {
+            width: 0;
+        }
+
+        .row {
+            display: flex;
+            gap: 10px;
+        }
+
+        .row button {
+            border: none;
+            padding: 15px 25px;
+            color: white;
+        }
+
+        .import-btn {
+            background-color: rgb(76, 157, 255);
+
+        }
+
+        .d3-active:active {
+            box-shadow: 0px 0px 5px black inset;
+        }
+
+
+
+        .export-btn {
+            background-color: tomato;
+        }
+        .show-btn{
+            background-color: chocolate;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="todo-container">
+        <p class="title">Todo List</p>
+        <div class="color-container">
+            <div class="grid-container" style="margin-top:5px;">
+                <input id="todo-name" type="text" placeholder="todo name">
+                <input id="todo-date" type="date" class="date">
+                <button class="add-btn d3-active" onclick="add()">Add</button>
+            </div>
+            <div class="row"><button class="export-btn d3-active" onclick="exportFunc()">Export</button><button class="import-btn d3-active" onclick="importFunc()">Import</button><input type="file" name="" hidden id="fileInput"></div>
+            <div class="grid-container" id="inserter">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

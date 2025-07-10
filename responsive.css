@@ -23,4 +23,7 @@
         align-items: start;
         height: auto;
     }
+    #inserter{
+        grid-template-columns: 1fr 1fr 100px !important;
+    }
 }

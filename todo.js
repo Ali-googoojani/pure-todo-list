@@ -125,7 +125,7 @@ function exportFunc() {
 
     console.log(JSON.stringify(saveObj));
 
-
+    if(saveObj.date.length>0){
     const blob = new Blob([JSON.stringify(saveObj)], { type: "application/json" });
     const url = URL.createObjectURL(blob);
 
@@ -135,6 +135,7 @@ function exportFunc() {
     a.click();
 
     URL.revokeObjectURL(url);
+    }
 }
 
 
